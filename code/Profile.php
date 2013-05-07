@@ -34,19 +34,7 @@ class Profile extends DataObject{
 	/*
 	 * @return String
 	 */
-	public function GroupName(){
-		if(isset($this->GroupID)){
-			return ProfileGroup::get()->byID($this->GroupID)->Name;
-		}else{
-			return "No group";
-		}
-	}
-
-	/*
-	 * @return String
-	 */
 	public function ShortBio(){
-		//return substr($this->Bio, 0, 500);
 		return $this->obj('Bio')->Summary();
 	}
 
