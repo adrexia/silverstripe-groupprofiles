@@ -8,6 +8,10 @@ class ProfileGroup extends DataObject{
 		'Name'=>'Varchar(255)'
 	);
 
+	private static $has_many = array(
+		'Profiles'=>'Profile'
+	);
+
 	//Search Fields
 	private static $searchable_fields = array(
 		'Name'
